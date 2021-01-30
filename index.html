@@ -1,6 +1,36 @@
 <!DOCTYPE html>
+<!-- Hi! Thanks for checking out my portfolio! 
+If you'd like to contact me and offer me a job, click contact on the side bar to send a message directly to my inbox! -->
 <html lang="en">
     <head>
+        <!-- Emailjs -->
+        <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+        
+<script type="text/javascript">
+    emailjs.init('user_bfvoe4Kfa5vHBSDj8R3Hs')
+(function() {
+emailjs.init("user_bfvoe4Kfa5vHBSDj8R3Hs");
+})();
+
+    window.onload = function() {
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // generate a five digit number for the contact_number variable
+            this.contact_number.value = Math.random() * 100000 | 0;
+            // these IDs from the previous steps
+            emailjs.sendForm('contact_service', 'contact_form', this)
+                .then(function() {
+                    console.log('SUCCESS!');
+                }, function(error) {
+                    console.log('FAILED...', error);
+                });
+        });
+    }
+
+    emailjs.sendForm('contact_service', 'contact_form', this)
+</script>
+
+
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
@@ -10,8 +40,13 @@
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
+            <!-- Header font -->
         <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+            <!-- Sidebar font -->
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap" rel="stylesheet">
+
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
@@ -29,6 +64,7 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
                     <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li> -->
@@ -37,21 +73,21 @@
             </div>
         </nav>
         
-        <!-- Page Content-->
+            <!-- Page Content-->
         
         <div class="container-fluid p-0">
             
-            <!-- About-->
+                                    <!-- About-->
             
             <section class="resume-section" id="about">
                 <div class="resume-section-content">
                     <h1 class="mb-0">
-                        C o d y
+                        Cody
                         <span class="text-primary">Castro</span>
                     </h1>
                     <div class="subheading mb-5">
-                        address · city · phone? ·
-                        <a href="mailto:name@email.com">email</a>
+                        he/him · New York City ·
+                        <a href="#contact">Contact me </a>
                     </div>
                     <p class="lead mb-5">
                         Highly creative software engineer interested in a full time role at a mission driven organization. Experience with Javascript, React, Ruby on Rails, PostgreSQL, ReactMapGL, MapboxGLjs. A former culture champion at a growing startup.
@@ -60,13 +96,14 @@
                         <a class="social-icon" href="http://www.linkedin.com/in/codycastro"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="http://www.github.com/cody-castro"><i class="fab fa-github"></i></a>
                         <a class="social-icon" href="http://www.twitter.com/dyco"><i class="fab fa-twitter"></i></a>
+                        <a href="#contact"><img src="./assets/img/email.png" alt="contact me" height="59.5rem" ></i></a>
                         <!-- <a class="social-icon" href="#"><i class="fab fa-facebook-f"></i></a> -->
                     </div>
                 </div>
             </section>
             <hr class="m-0" />
             
-            <!-- Skills-->
+                        <!-- Skills-->
     
             <section class="resume-section" id="skills">
                 <div class="resume-section-content">
@@ -75,34 +112,34 @@
                     <ul class="list-inline dev-icons">
                         <li class="list-inline-item"><i class="fab fa-html5"></i></li>
                         <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+                        <li class="list-inline-item"><img className="postgres" src="assets/img/postgresql-1324440215994540667.png" height="53px" alt="postgresql"></i></li>
+                        <li class="list-inline-item"><img className="rails" src="assets/img/rails-icon.png" height="53px" alt="ruby on rails"></i></li>
                         <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-angular"></i></li>
+                        <!-- <li class="list-inline-item"><i class="fab fa-angular"></i></li> -->
                         <li class="list-inline-item"><i class="fab fa-react"></i></li>
                         <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-sass"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-less"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-wordpress"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-gulp"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-grunt"></i></li>
+                        <!-- <li class="list-inline-item"><i class="fab fa-sass"></i></li> -->
+                        <!-- <li class="list-inline-item"><i class="fab fa-less"></i></li> -->
+                        <!-- <li class="list-inline-item"><i class="fab fa-wordpress"></i></li> -->
                         <li class="list-inline-item"><i class="fab fa-npm"></i></li>
                     </ul>
-                    <div class="subheading mb-3">Workflow</div>
+                    <div class="subheading mb-3">Other Skills</div>
                     <ul class="fa-ul mb-0">
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Mobile-First, Responsive Design
+                            Public Speaking
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Browser Testing & Debugging
+                            Cross-Team Communication
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Functional Teams
+                            DEI Advocate
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Agile Development & Scrum
+                            Networking
                         </li>
                     </ul>
                 </div>
@@ -150,6 +187,19 @@
             </section>
             <hr class="m-0" />
 
+            <!-- Projects-->
+            <section class="resume-section" id="projects">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Projects</h2>
+                    <h4>My Accessible Transit</h4><a href="https://districtbuildnyc.netlify.app/">Demo</a>
+                    <div style="width:100%;height:0px;position:relative;padding-bottom:56.250%;"><iframe src="https://streamable.com/e/45hn0p" frameborder="0" width="100%" height="100%" allowfullscreen style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div>
+                   <br>
+                    <h4>DistrictBuild NYC</h4>
+                    <div style="width:100%;height:0px;position:relative;padding-bottom:56.250%;"><iframe src="https://streamable.com/e/mm6d4e" frameborder="0" width="100%" height="100%" allowfullscreen style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div>
+                </div>
+            </section>
+            <hr class="m-0" />
+
             <!-- Education-->
 
             <section class="resume-section" id="education">
@@ -162,15 +212,14 @@
                             <div>Software Engineering Intensive Track</div>
                             <!-- <p>GPA: 3.23</p> -->
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2006 - May 2010</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary">2020</span></div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">The State University of New York College at Fredonia</h3>
                             <div class="subheading mb-3">Bachelor of Science - Communications; Media Management - Visual Arts & New Media</div>
-                            <p>GPA: 3.56</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2002 - May 2006</span></div>
+                        <!-- <div class="flex-shrink-0"><span class="text-primary">August 2002 - May 2006</span></div> -->
                     </div>
                 </div>
             </section>
@@ -187,8 +236,31 @@
             </section>
             <hr class="m-0" />
 
-            <!-- Awards
-            <section class="resume-section" id="awards">
+
+
+                     <!-- Contact -->
+                        <!-- emailjs -->
+                        <section class="resume-section" id="contact">
+                            <div class="resume-section-content">
+                              <h2 class="mb-5">Call Me, Beep Me, If You Want to Reach Me:</h2>
+                             <p></p>
+                                <form id="contact-form">
+                                  <input type="hidden" name="contact_number">
+                                
+                                 <input type="text" name="user_name" placeholder="name">
+                                
+                                 <input type="email" name="user_email" placeholder="email">
+                                
+                                <textarea name="message" placeholder="Leave a message after the beep... BEEP"></textarea>
+                                <input type="submit" value="Send Message">
+                            </form>
+                             </div>
+                        </section>
+                        <hr class="m-0" />
+                            
+                            
+                            <!-- Awards
+                                <section class="resume-section" id="awards">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Awards & Certifications</h2>
                     <ul class="fa-ul mb-0">
@@ -234,6 +306,18 @@
                 </div>
             </section>
         </div> -->
+
+
+          <!-- Contact -->
+          <section class="resume-section" id="hire-me">
+            <div class="resume-section-content">
+                Bless
+               
+
+            </div>
+        </section>
+        <hr class="m-0" />
+
 
 
         <!-- Bootstrap core JS-->

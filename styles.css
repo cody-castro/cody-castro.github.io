@@ -47,6 +47,10 @@
   box-sizing: border-box;
 }
 
+.postgres{
+  color:rgba(221, 9, 9, 0.03)
+}
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -361,7 +365,7 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Londrina Solid', cursive;
   font-weight: 700;
   line-height: 1.2;
   color: #343a40;
@@ -6075,7 +6079,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #bd5d38 !important;
+  background-color: #da521d !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -9996,7 +10000,7 @@ h3,
 h4,
 h5,
 h6 {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 h1 {
